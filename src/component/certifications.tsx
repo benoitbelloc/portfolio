@@ -8,7 +8,7 @@ export default function Certifications() {
         <div>
             <h1>Certifications</h1>
             <p>This is the certifications page.</p>
-            <Button onClick={() => navigate('/')}>Retour</Button>
+            <Button onClick={() => navigate('/home')}>Retour</Button>
         </div>
     )
 }

@@ -8,7 +8,7 @@ export default function Skills() {
         <div>
             <h1>Skills</h1>
             <p>This is the skills page.</p>
-            <Button onClick={() => navigate('/')}>Retour</Button>
+            <Button onClick={() => navigate('/home')}>Retour</Button>
         </div>
     )
 }
