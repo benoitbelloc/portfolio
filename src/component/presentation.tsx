@@ -8,7 +8,7 @@ export default function Presentation() {
         <div>
             <h1>Presentation</h1>
             <p>This is the presentation page.</p>
-            <Button onClick={() => navigate('/home')}>Go</Button>
+            <Button onClick={() => navigate('/home')}>Let's Go</Button>
         </div>
     )
 }

@@ -1,48 +1,76 @@
-import { AspectRatio, Button, Card, CardContent, Grid, Tooltip, Typography } from "@mui/joy";
+import { AspectRatio, Button, Card, CardContent, Grid, Stack, Tooltip, Typography } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
-import { Undo2 } from "lucide-react";
+import { AlignCenter, Undo2 } from "lucide-react";
 
 export default function Home() {
     const navigate = useNavigate();
-    const cardColor = "#EEEEEE";
+    const cardColor = "#white";
 
     return (
         <div>
-            <Tooltip title="Retour" variant="plain" placement="right">
-                <Undo2 size={50} color={ cardColor } />
-            </Tooltip>
-            <Grid container sx={{ flexGrow: 1, justifyContent: "center", alignItems: "center", margin: 3 }} gap={4}>
-            <Card sx={{ width: 370, backgroundColor: cardColor, borderColor: "#ffff" }} onClick={() => navigate('/experiences')}>
+            <Button onClick={() => navigate('/')} variant="outlined">Retour</Button>
+            <Stack direction="row" spacing={3} justifyContent="center" mt={10}>
+            <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
                 <Typography level="title-lg">Expériences</Typography>
                 <CardContent>
                     <img src="public\experiences.png" alt="" />
+                    <Button
+                    variant="solid"
+                    size="md"
+                    color="primary"
+                    sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
+                    onClick={() => navigate('/experiences')}
+                    >
+                    Explore
+                    </Button>
                 </CardContent>
             </Card>
-            <Grid container xs={1} md={5} sx={{ flexGrow: 1 }} gap={4}>
-                <Card onClick={() => navigate('/skills')} sx={{ width: 370, height: 150, backgroundColor: cardColor, borderColor: "#ffff" }} orientation="horizontal">
-                    <Typography level="title-lg" fontWeight="md">Skills</Typography>
-                    <CardContent sx={{ alignItems: "center" }}>
-                    <AspectRatio ratio="1" variant="plain" sx={{ width: 150 }}>
-                        <img src="public\skills.png" alt="" />
-                    </AspectRatio>
-                    </CardContent>
-                </Card>
-                <Grid container sx={{ flexGrow: 1 }} gap={4}>
-                <Card sx={{ width: 150, backgroundColor: cardColor, borderColor: "#ffff" }} onClick={() => navigate('/certifications')}>
-                    <Typography level="title-lg">Certifications</Typography>
-                    <CardContent>
-                        <img src="public\certifications.png" alt="" />
-                    </CardContent>  
-                </Card>
-                <Card onClick={() => navigate('/contact')} sx={{ width: 150, textAlign: "center", backgroundColor: cardColor, borderColor: "#ffff" }}>
-                    <Typography level="title-lg">Contact</Typography>
-                    <CardContent>
-                        <img src="public\contact.png" alt="" />
-                    </CardContent>  
-                </Card>
-                </Grid>
-            </Grid>
-            </Grid>
+            <Card sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
+                <Typography level="title-lg">Compétences</Typography>
+                <CardContent>
+                    <img src="public\skills.png" alt="" />
+                    <Button
+                    variant="solid"
+                    size="md"
+                    color="primary"
+                    onClick={() => navigate('/skills')}
+                    sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
+                    >
+                    Explore
+                    </Button>
+                </CardContent>
+            </Card>
+            <Card sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
+                <Typography level="title-lg">Certifications</Typography>
+                <CardContent>
+                    <img src="public\certifications.png" alt="" />
+                    <Button
+                    variant="solid"
+                    size="md"
+                    color="primary"
+                    onClick={() => navigate('/certifications')}
+                    sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
+                    >
+                    Explore
+                    </Button>
+                </CardContent>
+            </Card>
+            <Card sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
+                <Typography level="title-lg">Contact</Typography>
+                <CardContent>
+                    <img src="public\contact.png" alt="" />
+                    <Button
+                    variant="solid"
+                    size="md"
+                    color="primary"
+                    onClick={() => navigate('/contact')}
+                    sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
+                    >
+                    Explore
+                    </Button>
+                </CardContent>
+            </Card>
+            </Stack>
         </div>
     )
 }

@@ -8,7 +8,7 @@ export default function Experiences() {
         <div>
             <h1>Experiences</h1>
             <p>This is the experiences page.</p>
-            <Button onClick={() => navigate('/home')}>Retour</Button>
+            <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
         </div>
     )
 }
