@@ -1,4 +1,5 @@
-import { Button, Card, CardActions, CardContent, Divider, FormControl, FormLabel, Input, Stack, Textarea, Typography } from "@mui/joy";
+import { Button, Card, CardActions, CardContent, Divider, FormControl, FormLabel, Input, Stack, TextField, Textarea, Typography, textareaClasses } from "@mui/joy";
+import { MailIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
@@ -7,12 +8,12 @@ export default function Contact() {
     return (
         <div>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack alignItems={"center"} justifyContent="center" mt={7}>
+            <Stack alignItems={"center"} justifyContent="center" mt={3}>
             <Card
             variant="outlined"
             sx={{
-                width: 380,
-                height: 380,
+                width: 400,
+                height: 400,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -36,16 +37,26 @@ export default function Contact() {
                     </FormControl>
                     <FormControl sx={{ gridColumn: '1/-1' }}>
                         <FormLabel>Mail</FormLabel>
-                        <Input placeholder="exemple@mail.com" />
+                        <Input startDecorator={<MailIcon />} required placeholder="exemple@mail.com" />
+                    </FormControl>
+                    <FormControl sx={{ gridColumn: '1/-1' }}>
+                        <FormLabel>Objet</FormLabel>
+                        <Input required />
                     </FormControl>
                     <FormControl sx={{ gridColumn: '1/-1' }}>
                         <FormLabel>Message</FormLabel>
-                        <Textarea />
+                        <Textarea required sx={{ height: 100 }} />
                     </FormControl>
-                  </CardContent>
-                  <CardActions>
-                    <Button variant="solid">Envoyer</Button>
-                  </CardActions>
+                    <Button
+                    variant="solid"
+                    size="sm"
+                    color="primary"
+                    onClick={() => navigate('/contact')}
+                    sx={{ gridColumn: '1/-1', mt: 1}}
+                    >
+                    Envoyer
+                    </Button>                  
+                    </CardContent>
             </Card>
             </Stack>
         </div>
