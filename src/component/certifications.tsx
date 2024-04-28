@@ -1,6 +1,6 @@
 import { Button, Card, CardContent, Divider, Stack, Typography } from "@mui/joy";
 import { CalendarIcon } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Certifications() {
     const navigate = useNavigate();

@@ -1,6 +1,5 @@
-import { AspectRatio, Button, Card, CardContent, Grid, Stack, Tooltip, Typography } from "@mui/joy";
+import { Button, Card, CardContent, Stack, Typography } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
-import { AlignCenter, Undo2 } from "lucide-react";
 
 export default function Home() {
     const navigate = useNavigate();
