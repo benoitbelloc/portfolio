@@ -47,7 +47,7 @@ export default function Certifications() {
                 <img src="public\bachelor.png" alt="" width={300} />
                 <Typography level="title-lg">Bachelor à Toulouse Ynov Campus</Typography>
                 <CardContent>
-                    <Typography>Technicien informatique spécialité développement Web et Mobile.</Typography>
+                    <Typography>Technicien informatique spécialité développement Web et Mobile</Typography>
                 </CardContent>
                 <Stack direction="row" spacing={1} justifyContent="auto">
                 <CalendarIcon /> <Typography>2021-2022</Typography>
