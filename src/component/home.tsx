@@ -20,7 +20,7 @@ export default function Home() {
                     sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
                     onClick={() => navigate('/experiences')}
                     >
-                    Explore
+                    Détails
                     </Button>
                 </CardContent>
             </Card>
@@ -35,7 +35,7 @@ export default function Home() {
                     onClick={() => navigate('/skills')}
                     sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
                     >
-                    Explore
+                    Hard & Soft
                     </Button>
                 </CardContent>
             </Card>
@@ -50,7 +50,7 @@ export default function Home() {
                     onClick={() => navigate('/certifications')}
                     sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
                     >
-                    Explore
+                    Obtenues et en cours
                     </Button>
                 </CardContent>
             </Card>
@@ -65,7 +65,7 @@ export default function Home() {
                     onClick={() => navigate('/contact')}
                     sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
                     >
-                    Explore
+                    Formulaire
                     </Button>
                 </CardContent>
             </Card>
