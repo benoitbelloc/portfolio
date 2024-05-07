@@ -1,13 +1,32 @@
-import { Button, Card, CardContent, Divider, FormControl, FormLabel, Input, Stack, Textarea, Typography } from "@mui/joy";
-import { MailIcon } from "lucide-react";
+import { Button, Card, CardContent, Divider, Stack, Typography } from "@mui/joy";
+import emailjs, { send } from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 
 export default function Contact() {
     const navigate = useNavigate();
+    const form = useRef() as React.MutableRefObject<HTMLFormElement>;
+    
+    const serviceId = 'service_hlcmb1s';
+    const templateId = 'template_y3qid8l';
+    const key = 'ZRgw1KtcWPfeBAi9e';
+    
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+        emailjs.sendForm(serviceId, templateId, form.current, {
+            publicKey: key,
+        })
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
 
     return (
         <div>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
+            
             <Stack alignItems={"center"} justifyContent="center" mt={3}>
             <Card
             variant="outlined"
@@ -27,35 +46,19 @@ export default function Contact() {
                     display: 'grid',
                     gridTemplateColumns: 'repeat(2, minmax(50px, 3fr))',
                 }}>
-                    <FormControl>
-                        <FormLabel>Prénom</FormLabel>
-                        <Input />
-                    </FormControl>
-                    <FormControl>
-                        <FormLabel>Nom</FormLabel>
-                        <Input />
-                    </FormControl>
-                    <FormControl sx={{ gridColumn: '1/-1' }}>
-                        <FormLabel>Mail</FormLabel>
-                        <Input startDecorator={<MailIcon />} required placeholder="exemple@mail.com" />
-                    </FormControl>
-                    <FormControl sx={{ gridColumn: '1/-1' }}>
-                        <FormLabel>Objet</FormLabel>
-                        <Input required />
-                    </FormControl>
-                    <FormControl sx={{ gridColumn: '1/-1' }}>
-                        <FormLabel>Message</FormLabel>
-                        <Textarea required sx={{ height: 100 }} />
-                    </FormControl>
-                    <Button
-                    variant="solid"
-                    size="sm"
-                    color="primary"
-                    onClick={() => navigate('/contact')}
-                    sx={{ gridColumn: '1/-1', mt: 1}}
-                    >
-                    Envoyer
-                    </Button>                  
+                    <form ref={form} onSubmit={sendEmail}>
+                        <label>Nom</label>
+                        <input type="text" name="user_lastName" />
+                        <label>Prénom</label>
+                        <input type="text" name="user_firstName" />
+                        <label>Email</label>
+                        <input type="email" name="user_email" />
+                        <label>Objet</label>
+                        <input type="text" name="user_object" />
+                        <label>Message</label>
+                        <textarea name="user_message" />
+                        <Button type="submit">Envoyer</Button>
+            </form>              
                     </CardContent>
             </Card>
             </Stack>
