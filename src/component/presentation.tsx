@@ -19,7 +19,7 @@ export default function Presentation() {
 
     return (
         <div>
-            <Stack direction="row" spacing={3} justifyContent="center" mt={7}>
+            <Stack component="div" direction="row" spacing={3} justifyContent="center" mt={7}>
                 <Card variant="outlined" sx={{ width: 500 }}>
                     <Stack direction="row" spacing={3} justifyContent="center">
                     <img width={150} src="public\avatar.png" alt="avatar" />
