@@ -11,7 +11,7 @@ export default function Experiences() {
     return (
         <div style={{ padding: '0 0px', maxWidth: '100%', boxSizing: 'border-box' }}>
       <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
-      <Stack ml={{ xs: 0, sm: 7 }} mr={{ xs: 1, sm: 7 }} mt={4}>
+      <Stack ml={{ xs: 0, sm: 7 }} mr={{ xs: 0, sm: 7 }} mt={4}>
         <h1>Expériences</h1>
         <Divider sx={{ my: 1 }} />
         <Tabs 
@@ -42,7 +42,7 @@ export default function Experiences() {
           </TabList>
           
           <TabPanel value={0} sx={{ p: 0 }}>
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center" justifyContent="center" mt={3}>
               <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Proxy Product Owner</b></Typography>
                 <CardContent>
