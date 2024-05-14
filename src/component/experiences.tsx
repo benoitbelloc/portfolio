@@ -47,7 +47,7 @@ export default function Experiences() {
                 <Typography><b>Proxy Product Owner</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                    <img width={100} height={100} src="imsa.png" alt="IMSA logo" />
                     <Stack direction="column" spacing={1}>
                       <Typography>Recueillir les besoins clients et les traduire en fonctionnalité techniques en coordination avec l’équipe de développement (Alternance)</Typography>
                       <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -61,7 +61,7 @@ export default function Experiences() {
                 <Typography><b>Product Owner - Porteur de projet</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <img width={100} height={100} src="ynov.png" alt="Ynov logo" />
                     <Stack direction="column" spacing={1}>
                       <Typography>Piloter, conceptualiser et recueillir les besoins pour une application de gestion de compétences à destination de tous les organismes de formation (Projet école)</Typography>
                       <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -81,7 +81,7 @@ export default function Experiences() {
                   <Typography><b>Proxy Product Owner</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                    <img width={100} height={100} src="imsa.png" alt="IMSA logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Recueillir les besoins clients et les traduire en fonctionnalité techniques en coordination avec l’équipe de développement (Alternance)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -95,7 +95,7 @@ export default function Experiences() {
                   <Typography><b>Dévellopeur Full Stack</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                    <img width={100} height={100} src="imsa.png" alt="IMSA logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -111,7 +111,7 @@ export default function Experiences() {
                   <Typography><b>Product Owner - Porteur de projet</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <img width={100} height={100} src="ynov.png" alt="Ynov logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Piloter, conceptualiser et recueillir les besoins pour une application de gestion de compétences à destination de tous les organismes de formation (Projet école)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -125,7 +125,7 @@ export default function Experiences() {
                   <Typography><b>Manager de projets IT</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <img width={100} height={100} src="ynov.png" alt="Ynov logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Accompagner les chefs de projet dans leur réalisation en leur apportant les ressources nécessaire et en résolvant les conflits internes (Projet école)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -146,7 +146,7 @@ export default function Experiences() {
                   <Typography><b>Dévellopeur Full Stack</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                    <img width={100} height={100} src="imsa.png" alt="IMSA logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -162,7 +162,7 @@ export default function Experiences() {
                   <Typography><b>Manager de projets IT</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <img width={100} height={100} src="ynov.png" alt="Ynov logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Accompagner les chefs de projet dans leur réalisation en leur apportant les ressources nécessaire et en résolvant les conflits internes (Projet école)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -176,7 +176,7 @@ export default function Experiences() {
                   <Typography><b>Développeur Full Stack</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
-                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <img width={100} height={100} src="ynov.png" alt="Ynov logo" />
                       <Stack direction="column" spacing={1}>
                         <Typography>Développer un site web pour un nouveau festival - Angular, Express js, MongoDB (Projet école)</Typography>
                         <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -196,7 +196,7 @@ export default function Experiences() {
                 <Typography><b>Dévellopeur Full Stack</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
-                  <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                  <img width={100} height={100} src="imsa.png" alt="IMSA logo" />
                     <Stack direction="column" spacing={1}>
                       <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
                       <Stack direction="row" spacing={1} justifyContent="flex-start">
@@ -210,7 +210,7 @@ export default function Experiences() {
                 <Typography><b>Développeur Full Stack</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
-                  <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                  <img width={100} height={100} src="ynov.png" alt="Ynov logo" />
                     <Stack direction="column" spacing={1}>
                       <Typography>Développer un site web pour un nouveau festival - Angular, Express js, MongoDB (Projet école)</Typography>
                       <Stack direction="row" spacing={1} justifyContent="flex-start">

@@ -34,7 +34,7 @@ export default function Presentation() {
             alignItems="center"
             p={2}
           >
-            <img width={150} src="public/avatar.png" alt="avatar" />
+            <img width={150} src="avatar.png" alt="avatar" />
             <Stack justifyContent="center" alignItems={{ xs: 'center', md: 'flex-start' }}>
               <Typography fontSize={40} component="div">Benoît Belloc</Typography>
               <Typography fontSize={20} component="div"> Product Owner</Typography>

@@ -18,13 +18,13 @@ export default function Skills() {
                         <CardContent>
                             <Stack direction="row" spacing={1}>
                                 <Tooltip title="Jira">
-                                <img width={80} src="public\jira.png" />
+                                <img width={80} src="jira.png" />
                                 </Tooltip>
                                 <Tooltip title="Notion">
-                                <img width={80} src="public\notion.png" />
+                                <img width={80} src="notion.png" />
                                 </Tooltip>
                                 <Tooltip title="Trello">
-                                <img width={80} src="public\trello.png" />
+                                <img width={80} src="trello.png" />
                                 </Tooltip>
                             </Stack>
                         </CardContent>
@@ -47,13 +47,13 @@ export default function Skills() {
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="Scaled Agile SAFe">
-                                <img width={80} src="public\safe.png" />
+                                <img width={80} src="safe.png" />
                                 </Tooltip>
                                 <Tooltip title="Kanban">
-                                <img width={80} src="public\kanban.png" />
+                                <img width={80} src="kanban.png" />
                                 </Tooltip>
                                 <Tooltip title="Scrum">
-                                <img width={80} src="public\scrum.png" />
+                                <img width={80} src="scrum.png" />
                                 </Tooltip>
                             </Stack>
                     </CardContent>
@@ -78,13 +78,13 @@ export default function Skills() {
                         <CardContent>
                             <Stack direction="row" spacing={1}>
                                 <Tooltip title="React">
-                                <img width={80} src="public\react.png" />
+                                <img width={80} src="react.png" />
                                 </Tooltip>
                                 <Tooltip title="Angular">
-                                <img width={80} src="public\angular.png" />
+                                <img width={80} src="angular.png" />
                                 </Tooltip>
                                 <Tooltip title="Flutter">
-                                <img width={80} src="public\flutter.png" />
+                                <img width={80} src="flutter.png" />
                                 </Tooltip>
                             </Stack>
                         </CardContent>
@@ -107,13 +107,13 @@ export default function Skills() {
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="MySQL">
-                                <img width={80} src="public\mysql.png" />
+                                <img width={80} src="mysql.png" />
                                 </Tooltip>
                                 <Tooltip title="MongoDB">
-                                <img width={80} src="public\mongodb.png" />
+                                <img width={80} src="mongodb.png" />
                                 </Tooltip>
                                 <Tooltip title="Prisma">
-                                <img width={80} src="public\prisma.png" />
+                                <img width={80} src="prisma.png" />
                                 </Tooltip>
                             </Stack>
                     </CardContent>
@@ -138,13 +138,13 @@ export default function Skills() {
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="NestJs">
-                                <img width={80} src="public\nestjs.png" />
+                                <img width={80} src="nestjs.png" />
                                 </Tooltip>
                                 <Tooltip title="Java J2E">
-                                <img width={80} src="public\javaj2e.png" />
+                                <img width={80} src="javaj2e.png" />
                                 </Tooltip>
                                 <Tooltip title="Django">
-                                <img width={80} src="public\django.png" />
+                                <img width={80} src="django.png" />
                                 </Tooltip>
                             </Stack>
                     </CardContent>
@@ -167,13 +167,13 @@ export default function Skills() {
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="Docker">
-                                <img width={80} src="public\docker.png" />
+                                <img width={80} src="docker.png" />
                                 </Tooltip>
                                 <Tooltip title="Gitlab CI">
-                                <img width={80} src="public\gitlabci.png" />
+                                <img width={80} src="gitlabci.png" />
                                 </Tooltip>
                                 <Tooltip title="Github Actions">
-                                <img width={80} src="public\githubaction.png" />
+                                <img width={80} src="githubaction.png" />
                                 </Tooltip>
                             </Stack>
                     </CardContent>

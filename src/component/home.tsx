@@ -15,7 +15,7 @@ export default function Home() {
           <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography><b>Expériences</b></Typography>
             <CardContent>
-              <img src="public/experiences.png" alt="" style={{ width: '100%', height: 'auto' }} />
+              <img src="experiences.png" alt="" style={{ width: '100%', height: 'auto' }} />
               <Button
                 color="primary"
                 sx={{ mt: 2, fontWeight: 600 }}
@@ -28,7 +28,7 @@ export default function Home() {
           <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography fontStyle={"h3"} component="div"><b>Compétences</b></Typography>
             <CardContent>
-              <img src="public/skills.png" alt="" style={{ width: '100%', height: 'auto' }} />
+              <img src="skills.png" alt="" style={{ width: '100%', height: 'auto' }} />
               <Button
                 color="primary"
                 sx={{ mt: 2, fontWeight: 600 }}
@@ -41,7 +41,7 @@ export default function Home() {
           <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography fontStyle={"h3"} component="div"><b>Certifications</b></Typography>
             <CardContent>
-              <img src="public/certifications.png" alt="" style={{ width: '100%', height: 'auto' }} />
+              <img src="certifications.png" alt="" style={{ width: '100%', height: 'auto' }} />
               <Button
                 color="primary"
                 sx={{ mt: 2, fontWeight: 600 }}
@@ -54,7 +54,7 @@ export default function Home() {
           <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography fontStyle={"h3"} component="div"><b>Contact</b></Typography>
             <CardContent>
-              <img src="public/contact.png" alt="" style={{ width: '100%', height: 'auto' }} />
+              <img src="contact.png" alt="" style={{ width: '100%', height: 'auto' }} />
               <Button
                 color="primary"
                 sx={{ mt: 2, fontWeight: 600 }}
