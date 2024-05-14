@@ -12,7 +12,7 @@ export default function Skills() {
             <Stack mx={{ xs: 0, md: 7 }} my={4}>
                 <h1>Hard Skills</h1>
                 <Divider inset="none" />
-                <Stack direction={{ xs: 'column', md: 'row' }} spacing={5} alignItems="center" mt={3}>
+                <Stack direction={{ xs: 'column', md: 'row' }} spacing={5} alignItems="center" justifyContent={"center"} mt={3}>
                 <Stack direction="column" spacing={3} justifyContent="center">
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                         <CardContent>
