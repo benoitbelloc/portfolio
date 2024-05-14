@@ -65,6 +65,10 @@ export default function Certifications() {
           </Card>
         </Stack>
       </Stack>
+      <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
     </div>
     )
 }

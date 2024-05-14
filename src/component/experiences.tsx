@@ -224,6 +224,10 @@ export default function Experiences() {
           </TabPanel>
         </Tabs>
       </Stack>
+      <Stack alignItems={"flex-end"} direction={"column"} mt={10}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
     </div>
     )
 }
