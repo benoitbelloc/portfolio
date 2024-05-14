@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Presentation() {
     const navigate = useNavigate();
     const handleCV = () => {
-        const pdfUrl = "../../public/cv-benoitbelloc.pdf";
+        const pdfUrl = "cv-benoitbelloc.pdf";
         const anchorElement = document.createElement('a');
         anchorElement.href = pdfUrl;
         anchorElement.download = 'cv-benoitbelloc.pdf';
