@@ -1,8 +1,8 @@
-import { Button, FormControl, FormLabel, Input, Stack, Step, StepButton, StepIndicator, Stepper, Textarea, Typography } from "@mui/joy";
+import { Button, Divider, FormControl, FormLabel, Input, Stack, Textarea } from "@mui/joy";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
-import { Check, CheckCircleIcon, MailIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
 
 
 export default function Contact() {
@@ -20,9 +20,11 @@ export default function Contact() {
         })
         .then((result) => {
             console.log(result.text);
+            alert("Votre message a bien été envoyé");
             form.current.reset();
         }, (error) => {
             console.log(error.text);
+            alert("Une erreur est survenue, veuillez réessayer");
             form.current.reset();
         });
     }
@@ -30,9 +32,12 @@ export default function Contact() {
     return (
         <div>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack alignItems={"center"} justifyContent="center" mt={3}>
+            <Stack ml={7} mr={7}>
+            <h1>Contact</h1>
+            <Divider inset="none" />
+            <Stack direction={"row"} justifyContent="center" mt={1}>
                     <form ref={form} onSubmit={sendEmail}>
-                        
+                        <Stack direction={"row"} spacing={3}>
                         <FormControl>
                         <FormLabel>Nom</FormLabel>
                         <Input type="text" name="user_lastName" />
@@ -41,40 +46,32 @@ export default function Contact() {
                         <FormLabel>Prénom</FormLabel>
                         <Input type="text" name="user_firstName" />
                         </FormControl>
+                        </Stack>
                         <FormControl>
-                        <FormLabel>Email</FormLabel>
-                        <Input type="email" name="user_email" startDecorator={<MailIcon />}/>
+                        <FormLabel>Email*</FormLabel>
+                        <Input required type="email" name="user_email" startDecorator={<MailIcon />}/>
                         </FormControl>
                         <FormControl>
-                        <FormLabel>Objet</FormLabel>
-                        <Input type="text" name="user_object" />
+                        <FormLabel>Objet*</FormLabel>
+                        <Input required type="text" name="user_object" />
                         </FormControl>
                         <FormControl>
-                        <FormLabel sx={{ gridColumn: '1/-1' }}>Message</FormLabel>
-                        <Textarea required name="user_message" sx={{ height: 100 }}/>
+                        <FormLabel sx={{ gridColumn: '1/-1' }}>Message*</FormLabel>
+                        <Textarea required name="user_message" sx={{ height: 130 }}/>
                         </FormControl>
-                        <Button 
+                        <Button
                         type="submit"
                         variant="solid"
                         size="sm"
                         color="primary"
                         sx={{ gridColumn: '1/-1', mt: 1}}
-                        // onClick={}
+                        fullWidth
                         >
                             Envoyer
                         </Button>                        
             </form>           
             </Stack>
+            </Stack>
         </div>
     )
 }
-
-{/* <Stepper sx={{ width: '100%' }}>
-                            <Step
-                            active
-                            indicator={
-                              <StepIndicator variant="outlined" color="primary">
-                                <CheckCircleIcon />
-                              </StepIndicator>
-                            }><Typography level="title-lg">Identité</Typography></Step>
-                        </Stepper> */}
