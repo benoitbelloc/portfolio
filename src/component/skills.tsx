@@ -9,7 +9,7 @@ export default function Skills() {
     return (
         <div>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack ml={7} mr={7}>
+            <Stack ml={5} mr={5}>
                 <h1>Hard Skills</h1>
                 <Divider inset="none" />
                 <Stack direction="row" spacing={5} justifyContent="center" mt={3}>
