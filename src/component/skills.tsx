@@ -9,10 +9,10 @@ export default function Skills() {
     return (
         <div style={{ padding: "0 16px", maxWidth: "100%", boxSizing: 'border-box' }}>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack mx={{ xs: 2, md: 7 }} my={4}>
+            <Stack mx={{ xs: 0, md: 7 }} my={4}>
                 <h1>Hard Skills</h1>
                 <Divider inset="none" />
-                <Stack direction={{ xs: 'column', md: 'row' }} spacing={5} justifyContent="center" mt={3}>
+                <Stack direction={{ xs: 'column', md: 'row' }} spacing={5} alignItems="center" mt={3}>
                 <Stack direction="column" spacing={3} justifyContent="center">
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                         <CardContent>

@@ -9,9 +9,9 @@ export default function Experiences() {
     const [index, setIndex] = React.useState(0);
 
     return (
-        <div style={{ padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
+        <div style={{ padding: '0 0px', maxWidth: '100%', boxSizing: 'border-box' }}>
       <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
-      <Stack ml={{ xs: 1, sm: 8 }} mr={{ xs: 8, sm: 1 }} mt={4}>
+      <Stack ml={{ xs: 0, sm: 7 }} mr={{ xs: 1, sm: 7 }} mt={4}>
         <h1>Expériences</h1>
         <Divider sx={{ my: 1 }} />
         <Tabs 
@@ -43,7 +43,7 @@ export default function Experiences() {
           
           <TabPanel value={0} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
-              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+              <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Proxy Product Owner</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -57,7 +57,7 @@ export default function Experiences() {
                   </Stack>
                 </CardContent>
               </Card>
-              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+              <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Product Owner - Porteur de projet</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -77,7 +77,7 @@ export default function Experiences() {
           <TabPanel value={1} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
               <Stack direction="column" spacing={3}>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Proxy Product Owner</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -91,7 +91,7 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Dévellopeur Full Stack</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -107,7 +107,7 @@ export default function Experiences() {
                 </Card>
               </Stack>
               <Stack direction="column" spacing={3}>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Product Owner - Porteur de projet</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -121,7 +121,7 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Manager de projets IT</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -142,7 +142,7 @@ export default function Experiences() {
           <TabPanel value={2} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
               <Stack direction="column" spacing={3}>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Dévellopeur Full Stack</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -158,7 +158,7 @@ export default function Experiences() {
                 </Card>
               </Stack>                
               <Stack direction="column" spacing={3}>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Manager de projets IT</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -172,7 +172,7 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
-                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Développeur Full Stack</b></Typography>
                   <CardContent>
                     <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -192,7 +192,7 @@ export default function Experiences() {
 
           <TabPanel value={3} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
-              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+              <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Dévellopeur Full Stack</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>
@@ -206,7 +206,7 @@ export default function Experiences() {
                   </Stack>
                 </CardContent>                
               </Card>
-              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+              <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Développeur Full Stack</b></Typography>
                 <CardContent>
                   <Stack direction="row" spacing={1} alignItems={"center"}>

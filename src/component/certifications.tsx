@@ -11,10 +11,10 @@ export default function Certifications() {
     return (
         <div style={{ padding: '3px 3px', maxWidth: '100%', boxSizing: 'border-box' }}>
       <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
-      <Stack spacing={3} mx={{ xs: 1, md: 7 }} my={4}>
+      <Stack spacing={3} mx={{ xs: 0, md: 7 }} my={4}>
         <h1>Certifications en cours</h1>
         <Divider />
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" mt={3}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent={"center"} alignItems="center" mt={3}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Mastère à Toulouse Ynov Campus</b></Typography>
             <CardContent>
@@ -39,10 +39,10 @@ export default function Certifications() {
         </Stack>
       </Stack>
 
-      <Stack spacing={3} mx={{ xs: 1, md: 8 }} my={4}>
+      <Stack spacing={3} mx={{ xs: 0, md: 8 }} my={4}>
         <h1>Certifications obtenues</h1>
         <Divider />
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" mt={1}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" alignItems="center" mt={1}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Bachelor à Toulouse Ynov Campus</b></Typography>
             <CardContent>
@@ -53,8 +53,6 @@ export default function Certifications() {
             </Stack>
           </Card>
           <Card sx={{ width: 300 }} variant="outlined">
-            <Stack ml={1}>
-            </Stack>
             <Typography><b>DEUG MIASH à l'université Toulouse Jean-Jaurès</b></Typography>
             <CardContent>
               <Typography>Diplôme d'étude universitaire général en Mathématique et informatique appliqué aux sciences humaines et sociales</Typography>
