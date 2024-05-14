@@ -1,7 +1,9 @@
-import { Button, Card, CardContent, Divider, Stack, Typography } from "@mui/joy";
-import emailjs, { send } from '@emailjs/browser';
+import { Button, Divider, FormControl, FormLabel, Input, Stack, Textarea } from "@mui/joy";
+import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
+import React, { useRef } from "react";
+import { MailIcon } from "lucide-react";
+
 
 export default function Contact() {
     const navigate = useNavigate();
@@ -18,49 +20,57 @@ export default function Contact() {
         })
         .then((result) => {
             console.log(result.text);
+            alert("Votre message a bien été envoyé");
+            form.current.reset();
         }, (error) => {
             console.log(error.text);
+            alert("Une erreur est survenue, veuillez réessayer");
+            form.current.reset();
         });
     }
 
     return (
         <div>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            
-            <Stack alignItems={"center"} justifyContent="center" mt={3}>
-            <Card
-            variant="outlined"
-            sx={{
-                width: 400,
-                height: 400,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column',
-            }}
-            >
-                <Typography level="title-lg">Contact</Typography>
-                <Divider inset="none" />
-                <CardContent 
-                sx={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, minmax(50px, 3fr))',
-                }}>
+            <Stack ml={7} mr={7}>
+            <h1>Contact</h1>
+            <Divider inset="none" />
+            <Stack direction={"row"} justifyContent="center" mt={1}>
                     <form ref={form} onSubmit={sendEmail}>
-                        <label>Nom</label>
-                        <input type="text" name="user_lastName" />
-                        <label>Prénom</label>
-                        <input type="text" name="user_firstName" />
-                        <label>Email</label>
-                        <input type="email" name="user_email" />
-                        <label>Objet</label>
-                        <input type="text" name="user_object" />
-                        <label>Message</label>
-                        <textarea name="user_message" />
-                        <Button type="submit">Envoyer</Button>
-            </form>              
-                    </CardContent>
-            </Card>
+                        <Stack direction={"row"} spacing={3}>
+                        <FormControl>
+                        <FormLabel>Nom</FormLabel>
+                        <Input type="text" name="user_lastName" />
+                        </FormControl>
+                        <FormControl>
+                        <FormLabel>Prénom</FormLabel>
+                        <Input type="text" name="user_firstName" />
+                        </FormControl>
+                        </Stack>
+                        <FormControl>
+                        <FormLabel>Email*</FormLabel>
+                        <Input required type="email" name="user_email" startDecorator={<MailIcon />}/>
+                        </FormControl>
+                        <FormControl>
+                        <FormLabel>Objet*</FormLabel>
+                        <Input required type="text" name="user_object" />
+                        </FormControl>
+                        <FormControl>
+                        <FormLabel sx={{ gridColumn: '1/-1' }}>Message*</FormLabel>
+                        <Textarea required name="user_message" sx={{ height: 130 }}/>
+                        </FormControl>
+                        <Button
+                        type="submit"
+                        variant="solid"
+                        size="sm"
+                        color="primary"
+                        sx={{ gridColumn: '1/-1', mt: 1}}
+                        fullWidth
+                        >
+                            Envoyer
+                        </Button>                        
+            </form>           
+            </Stack>
             </Stack>
         </div>
     )

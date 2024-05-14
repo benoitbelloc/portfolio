@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Stack, Typography } from "@mui/joy";
+import { Button, Card, CardContent, Divider, Stack, Typography } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -8,7 +8,10 @@ export default function Home() {
     return (
         <div>
             <Button onClick={() => navigate('/')} variant="outlined">Retour</Button>
-            <Stack direction="row" spacing={3} justifyContent="center" mt={10}>
+            <Stack ml={7} mr={7}>
+            <h1>Dasboard</h1>
+            <Divider inset="none" />
+            <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
             <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
                 <Typography level="title-lg">Expériences</Typography>
                 <CardContent>
@@ -69,6 +72,7 @@ export default function Home() {
                     </Button>
                 </CardContent>
             </Card>
+            </Stack>
             </Stack>
         </div>
     )
