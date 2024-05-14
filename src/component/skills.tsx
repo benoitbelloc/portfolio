@@ -7,14 +7,14 @@ export default function Skills() {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div style={{ padding: "0 16px", maxWidth: "100%", boxSizing: 'border-box' }}>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack ml={7} mr={7}>
+            <Stack mx={{ xs: 2, md: 7 }} my={4}>
                 <h1>Hard Skills</h1>
                 <Divider inset="none" />
-                <Stack direction="row" spacing={5} justifyContent="center" mt={3}>
+                <Stack direction={{ xs: 'column', md: 'row' }} spacing={5} justifyContent="center" mt={3}>
                 <Stack direction="column" spacing={3} justifyContent="center">
-                    <Card orientation="horizontal" variant="outlined" sx={{ width: "auto", height: "auto" }}>
+                    <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                         <CardContent>
                             <Stack direction="row" spacing={1}>
                                 <Tooltip title="Jira">
@@ -43,7 +43,7 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Outils</CardOverflow>
                     </Card>
-                    <Card orientation="horizontal" variant="outlined" sx={{ width: "auto", height: "auto" }}>
+                    <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="Scaled Agile SAFe">
@@ -74,7 +74,7 @@ export default function Skills() {
                     </Card>
                     </Stack>
                     <Stack direction="column" spacing={3} justifyContent="center">
-                    <Card orientation="horizontal" variant="outlined" sx={{ width: "auto", height: "auto" }}>
+                    <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                         <CardContent>
                             <Stack direction="row" spacing={1}>
                                 <Tooltip title="React">
@@ -103,7 +103,7 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Frontend</CardOverflow>
                     </Card>
-                    <Card orientation="horizontal" variant="outlined" sx={{ width: "auto", height: "auto" }}>
+                    <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="MySQL">
@@ -134,7 +134,7 @@ export default function Skills() {
                     </Card>
                     </Stack>
                     <Stack direction="column" spacing={3} justifyContent="center">
-                    <Card orientation="horizontal" variant="outlined" sx={{ width: "auto", height: "auto" }}>
+                    <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="NestJs">
@@ -163,7 +163,7 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Backend</CardOverflow>
                     </Card>
-                    <Card orientation="horizontal" variant="outlined" sx={{ width: "auto", height: "auto" }}>
+                    <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
                                 <Tooltip title="Docker">
@@ -195,10 +195,10 @@ export default function Skills() {
                     </Stack>
                 </Stack>
             </Stack>
-            <Stack ml={7} mr={7}>
+            <Stack mx={{ xs: 2, md: 7 }} my={4}>
                 <h1>Soft Skills</h1>
                 <Divider inset="none" />
-                <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
+                <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" mt={3}>
                 <Stack direction="column" spacing={3} justifyContent="center" mt={1}>
                 <Chip
                 variant="outlined"
@@ -310,6 +310,10 @@ export default function Skills() {
                 </Stack>
                 </Stack>                
             </Stack>
+            <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
         </div>
     )
 }

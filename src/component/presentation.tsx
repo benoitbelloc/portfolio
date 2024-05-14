@@ -1,5 +1,5 @@
 import { Button, Card, Stack, Typography } from "@mui/joy";
-import { CalendarIcon, CarIcon, FileIcon, LinkedinIcon, MailIcon, MapIcon, PhoneCallIcon } from "lucide-react";
+import { CalendarIcon, CarIcon, CircleArrowRightIcon, FileIcon, LinkedinIcon, MailIcon, MapIcon, PhoneCallIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Presentation() {
@@ -18,65 +18,86 @@ export default function Presentation() {
     }
 
     return (
-        <div>
-            <Stack component="div" direction="row" spacing={3} justifyContent="center" mt={7}>
-                <Card variant="outlined" sx={{ width: 500 }}>
-                    <Stack direction="row" spacing={3} justifyContent="center">
-                    <img width={150} src="public\avatar.png" alt="avatar" />
-                    <Stack justifyContent="center">
-                    <Typography fontSize={40} level="title-lg">Benoît Belloc</Typography>
-                    <Typography fontSize={20} level="title-lg">Product Owner</Typography>
-                    </Stack>
-                    </Stack>
-                    <Typography level="title-md">Qui suis-je ?</Typography>
-                    <p>
-                        Je suis un Product Owner passionné par les nouvelles technologies et les méthodes agiles. 
-                        Je suis également bientôt diplômé d'un mastère informatique en développement web effectué à Toulouse Ynov Campus.
-                        Maîtrisant la conception fonctionnelle et technique d'une solution informatique, je suis capable de travailler en équipe efficacement, tout en pilotant un produit de sa conception à sa mise en production.
-                        Je suis à la recherche d'opportunités professionnelles innovantes et enrichissantes.
-                    </p>
-                </Card>
-                <Stack direction="column" spacing={6}>
-                <Card variant="outlined" sx={{ width: 500, height: 220 }}>
-                <Typography level="title-lg">A propos de moi...</Typography>
-                    <Stack direction="row" spacing={1} justifyContent="auto" mt={1}>
-                    <MapIcon />
-                    <h4>Toulouse</h4>
-                    </Stack>
-                    <Stack direction="row" spacing={1} justifyContent="auto">
-                    <PhoneCallIcon />
-                    <h4>06 20 30 84 07</h4>
-                    </Stack>
-                    <Stack direction="row" spacing={1} justifyContent="auto">
-                    <MailIcon />
-                    <h4>belloc.benoit@protonmail.com</h4>
-                    </Stack>
-                    <Stack direction="row" spacing={1} justifyContent="auto">
-                    <CarIcon />
-                    <h4>Véhiculé</h4>
-                    </Stack>
-                    <Stack direction="row" spacing={1} justifyContent="auto" mb={5}>
-                    <CalendarIcon />
-                    <h4>Disponile à partir du 30 septembre 2024</h4>
-                    </Stack>
-                </Card>
-                <Stack direction="row" spacing={1} justifyContent="center">
-                        <Button variant="outlined" onClick={handleLinkedin}>
-                            <Stack direction="row" spacing={1}>
-                            <LinkedinIcon />
-                            <h3>Ma page LinkedIn</h3>
-                            </Stack>
-                        </Button>
-                        <Button variant="outlined" onClick={handleCV}>
-                            <Stack direction="row" spacing={1}>
-                            <FileIcon />
-                            <h3>Mon CV</h3>
-                            </Stack>
-                        </Button>
-                    </Stack>
-                <Button onClick={() => navigate('/home')}>Pour plus de détails... C'est par ici !</Button>
-                    </Stack>
+        <div style={{ padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        spacing={3}
+        justifyContent="center"
+        alignItems="center"
+        mt={5}
+      >
+        <Card variant="outlined" sx={{ width: { xs: '100%', md: 500 }, maxWidth: '100%' }}>
+          <Stack
+            direction={{ xs: 'column', md: 'row' }}
+            spacing={3}
+            justifyContent="center"
+            alignItems="center"
+            p={2}
+          >
+            <img width={150} src="public/avatar.png" alt="avatar" />
+            <Stack justifyContent="center" alignItems={{ xs: 'center', md: 'flex-start' }}>
+              <Typography fontSize={40} component="div">Benoît Belloc</Typography>
+              <Typography fontSize={20} component="div"> Product Owner</Typography>
             </Stack>
-        </div>
+          </Stack>
+          <Typography mt={2}><b>Qui suis-je ?</b></Typography>
+          <Typography>
+            Je suis un Product Owner passionné par les nouvelles technologies et les méthodes agiles.
+            Je suis également bientôt diplômé d'un mastère informatique en développement web effectué à Toulouse Ynov Campus.
+            Maîtrisant la conception fonctionnelle et technique d'une solution informatique, je suis capable de travailler en équipe efficacement, tout en pilotant un produit de sa conception à sa mise en production.
+            Je suis à la recherche d'opportunités professionnelles innovantes et enrichissantes.
+          </Typography>
+        </Card>
+        <Stack direction="column" spacing={6} alignItems="center">
+          <Card variant="outlined" sx={{ width: { xs: '100%', md: 500 }, maxWidth: '100%', height: 220 }}>
+            <Typography><b>A propos de moi...</b></Typography>
+            <Stack direction="row" spacing={1} alignItems="center" mt={1}>
+              <MapIcon />
+              <Typography>Toulouse</Typography>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <PhoneCallIcon />
+              <Typography>06 20 30 84 07</Typography>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <MailIcon />
+              <Typography>belloc.benoit@protonmail.com</Typography>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <CarIcon />
+              <Typography>Véhiculé</Typography>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center" mb={5}>
+              <CalendarIcon />
+              <Typography>Disponible à partir du 30 septembre 2024</Typography>
+            </Stack>
+          </Card>
+          <Stack direction="row" spacing={1} justifyContent="center">
+            <Button variant="outlined" onClick={handleLinkedin}>
+              <Stack direction="row" spacing={1} alignItems={"center"}>
+                <LinkedinIcon />
+                <Typography>Ma page LinkedIn</Typography>
+              </Stack>
+            </Button>
+            <Button variant="outlined" onClick={handleCV}>
+              <Stack direction="row" spacing={1} alignItems={"center"}>
+                <FileIcon />
+                <Typography>Mon CV</Typography>
+              </Stack>
+            </Button>
+          </Stack>
+          <Button onClick={() => navigate('/home')}>
+            <Stack direction={"row"} spacing={1} alignItems={"center"}>
+            <Typography textColor={"white"}>Pour plus de détails... C'est par ici !</Typography>
+            <CircleArrowRightIcon />
+            </Stack>
+          </Button>
+        </Stack>
+      </Stack>
+      <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
+    </div>
     )
 }

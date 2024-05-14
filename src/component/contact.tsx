@@ -1,4 +1,4 @@
-import { Button, Divider, FormControl, FormLabel, Input, Stack, Textarea } from "@mui/joy";
+import { Button, Divider, FormControl, FormLabel, Input, Stack, Textarea, Typography } from "@mui/joy";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
@@ -30,48 +30,50 @@ export default function Contact() {
     }
 
     return (
-        <div>
-            <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack ml={7} mr={7}>
-            <h1>Contact</h1>
-            <Divider inset="none" />
-            <Stack direction={"row"} justifyContent="center" mt={1}>
-                    <form ref={form} onSubmit={sendEmail}>
-                        <Stack direction={"row"} spacing={3}>
-                        <FormControl>
-                        <FormLabel>Nom</FormLabel>
-                        <Input type="text" name="user_lastName" />
-                        </FormControl>
-                        <FormControl>
-                        <FormLabel>Prénom</FormLabel>
-                        <Input type="text" name="user_firstName" />
-                        </FormControl>
-                        </Stack>
-                        <FormControl>
-                        <FormLabel>Email*</FormLabel>
-                        <Input required type="email" name="user_email" startDecorator={<MailIcon />}/>
-                        </FormControl>
-                        <FormControl>
-                        <FormLabel>Objet*</FormLabel>
-                        <Input required type="text" name="user_object" />
-                        </FormControl>
-                        <FormControl>
-                        <FormLabel sx={{ gridColumn: '1/-1' }}>Message*</FormLabel>
-                        <Textarea required name="user_message" sx={{ height: 130 }}/>
-                        </FormControl>
-                        <Button
-                        type="submit"
-                        variant="solid"
-                        size="sm"
-                        color="primary"
-                        sx={{ gridColumn: '1/-1', mt: 1}}
-                        fullWidth
-                        >
-                            Envoyer
-                        </Button>                        
-            </form>           
+        <div style={{ padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
+      <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 1 }}>Retour</Button>
+      <Stack spacing={3} mx={{ xs: 2, md: 7 }} my={4}>
+        <h1>Contact</h1>
+        <Divider />
+        <Stack direction="row" justifyContent="center" mt={1}>
+          <form ref={form} onSubmit={sendEmail} style={{ width: '100%', maxWidth: 600 }}>
+            <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
+              <FormControl sx={{ width: "100%" }}>
+                <FormLabel>Nom</FormLabel>
+                <Input type="text" name="user_lastName" />
+              </FormControl>
+              <FormControl sx={{ width: "100%" }}>
+                <FormLabel>Prénom</FormLabel>
+                <Input type="text" name="user_firstName" />
+              </FormControl>
             </Stack>
-            </Stack>
-        </div>
+            <FormControl sx={{ mt: 1, width: "100%" }}>
+              <FormLabel>Email*</FormLabel>
+              <Input required type="email" name="user_email" startDecorator={<MailIcon />} />
+            </FormControl>
+            <FormControl sx={{ mt: 1, width: "100%" }}>
+              <FormLabel>Objet*</FormLabel>
+              <Input required type="text" name="user_object" />
+            </FormControl>
+            <FormControl sx={{ mt: 1, width: "100%" }}>
+              <FormLabel>Message*</FormLabel>
+              <Textarea required name="user_message" sx={{ height: 130 }} />
+            </FormControl>
+            <Button
+              type="submit"
+              color="primary"
+              sx={{ mt: 3 }}
+              fullWidth
+            >
+              Envoyer
+            </Button>
+          </form>
+        </Stack>
+      </Stack>
+      <Stack alignItems={"flex-end"} direction={"column"} mb={0}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
+    </div>
     )
 }

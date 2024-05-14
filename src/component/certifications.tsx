@@ -9,64 +9,66 @@ export default function Certifications() {
     }
 
     return (
-        <div>
-            <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack ml={7} mr={7}>
-            <h1>Certifications en cours</h1>
-            <Divider inset="none" />
-            <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
-                <Card sx={{ width: 300 }} variant="outlined">
-                <Typography level="title-lg">Mastère à Toulouse Ynov Campus</Typography>
-                <CardContent>
-                    <Typography>Expert en développement Web et Web Mobile</Typography>
-                </CardContent>
-                <Stack direction="row" spacing={1} justifyContent="auto">
-                <CalendarIcon /> <Typography>2022-2024</Typography>
-                </Stack>
-                </Card>
-                <Card sx={{ width: 300 }} variant="outlined">
-                <Typography level="title-lg">Titre RNCP niveau 7 : 
-                <Typography sx={{ color: "blue" }} onClick={handleRNCP}> RNCP35078</Typography>
-                </Typography>
-                <CardContent>
-                    <Typography>Expert informatique et systèmes d'information</Typography>
-                </CardContent>
-                <Stack direction="row" spacing={1} justifyContent="auto">
-                <CalendarIcon /> <Typography>2023-2024</Typography>
-                </Stack>
-                </Card>
+        <div style={{ padding: '3px 3px', maxWidth: '100%', boxSizing: 'border-box' }}>
+      <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
+      <Stack spacing={3} mx={{ xs: 1, md: 7 }} my={4}>
+        <h1>Certifications en cours</h1>
+        <Divider />
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} alignItems="center" mt={3}>
+          <Card sx={{ width: 300 }} variant="outlined">
+            <Typography><b>Mastère à Toulouse Ynov Campus</b></Typography>
+            <CardContent>
+              <Typography>Expert en développement Web et Web Mobile</Typography>
+            </CardContent>
+            <Stack direction="row" spacing={1} justifyContent="flex-start" alignItems="center">
+              <CalendarIcon /> <Typography>2022-2024</Typography>
             </Stack>
+          </Card>
+          <Card sx={{ width: 300 }} variant="outlined">
+            <Typography><b>Titre RNCP niveau 7 : 
+              <Typography component="span" sx={{ color: "blue", cursor: "pointer" }} onClick={handleRNCP}> RNCP35078</Typography>
+              </b>
+            </Typography>
+            <CardContent>
+              <Typography>Expert informatique et systèmes d'information</Typography>
+            </CardContent>
+            <Stack direction="row" spacing={1} justifyContent="flex-start" alignItems="center">
+              <CalendarIcon /> <Typography>2023-2024</Typography>
             </Stack>
+          </Card>
+        </Stack>
+      </Stack>
 
-            <Stack ml={7} mr={7}>
-            <h1>Certifications obtenues</h1>
-            <Divider inset="none" />
-            <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
-            {/* <Card sx={{ width: 300 }} variant="outlined">A venir...</Card> */}
-                <Card sx={{ width: 300 }} variant="outlined">
-                <img src="public\bachelor.png" alt="" width={300} />
-                <Typography level="title-lg">Bachelor à Toulouse Ynov Campus</Typography>
-                <CardContent>
-                    <Typography>Technicien informatique spécialité développement Web et Mobile</Typography>
-                </CardContent>
-                <Stack direction="row" spacing={1} justifyContent="auto">
-                <CalendarIcon /> <Typography>2021-2022</Typography>
-                </Stack>
-                </Card>
-                <Card sx={{ width: 300 }} variant="outlined">
-                    <Stack ml={2}>
-                    <img src="public\deug.png" alt="" width={265} />
-                    </Stack>
-                <Typography level="title-lg">DEUG MIASH à l'université Toulouse Jean-Jaurès</Typography>
-                <CardContent>
-                    <Typography>Diplôme d'étude universitaire général en Mathématique et informatique appliqué aux sciences humaines et sociales</Typography>
-                </CardContent>
-                <Stack direction="row" spacing={1} justifyContent="auto">
-                <CalendarIcon /> <Typography>2019-2021</Typography>
-                </Stack>
-                </Card>
+      <Stack spacing={3} mx={{ xs: 1, md: 8 }} my={4}>
+        <h1>Certifications obtenues</h1>
+        <Divider />
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} alignItems="center" mt={1}>
+          <Card sx={{ width: 300 }} variant="outlined">
+            <Typography><b>Bachelor à Toulouse Ynov Campus</b></Typography>
+            <CardContent>
+              <Typography>Technicien informatique spécialité développement Web et Mobile</Typography>
+            </CardContent>
+            <Stack direction="row" spacing={1} justifyContent="flex-start" alignItems="center">
+              <CalendarIcon /> <Typography>2021-2022</Typography>
             </Stack>
+          </Card>
+          <Card sx={{ width: 300 }} variant="outlined">
+            <Stack ml={1}>
             </Stack>
-        </div>
+            <Typography><b>DEUG MIASH à l'université Toulouse Jean-Jaurès</b></Typography>
+            <CardContent>
+              <Typography>Diplôme d'étude universitaire général en Mathématique et informatique appliqué aux sciences humaines et sociales</Typography>
+            </CardContent>
+            <Stack direction="row" spacing={1} justifyContent="flex-start" alignItems="center">
+              <CalendarIcon /> <Typography>2019-2021</Typography>
+            </Stack>
+          </Card>
+        </Stack>
+      </Stack>
+      <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
+    </div>
     )
 }

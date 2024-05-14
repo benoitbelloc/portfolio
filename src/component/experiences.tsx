@@ -9,243 +9,225 @@ export default function Experiences() {
     const [index, setIndex] = React.useState(0);
 
     return (
-        <div>
-            <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
-            <Stack ml={7} mr={7}>
-            <h1>Expériences</h1>
-            <Divider inset="none" />
-            <Tabs orientation="horizontal" value={index} onChange={(event, value) => setIndex(value as number)}>
-                <TabList 
-                disableUnderline
-                sx={{
-                  p: 0.5,
-                  gap: 0.5,
-                  borderRadius: 'xl',
-                  width: 'auto',
-                  bgcolor: 'background.level1',
-                  [`& .${tabClasses.root}[aria-selected="true"]`]: {
-                    boxShadow: 'sm',
-                    bgcolor: 'background.surface',
-                  },
-                  justifyContent: 'center',
-                }}>
-                    <Tab 
-                    variant={index === 0 ? 'outlined' : 'plain'}
-                    color={index === 0 ? 'primary' : 'neutral'}
-                    disableIndicator>2024</Tab>
-                    <Tab
-                    variant={index === 1 ? 'outlined' : 'plain'}
-                    color={index === 1 ? 'primary' : 'neutral'}
-                    disableIndicator>2023</Tab>
-                    <Tab
-                    variant={index === 2 ? 'outlined' : 'plain'}
-                    color={index === 2 ? 'primary' : 'neutral'}
-                    disableIndicator>2022</Tab>
-                    <Tab
-                    variant={index === 3 ? 'outlined' : 'plain'}
-                    color={index === 3 ? 'primary' : 'neutral'}
-                    disableIndicator>2021</Tab>
-                </TabList>
-                {/*
-                * 
-                2024
-                *
-                */}
-                <TabPanel value={0}>
-                <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Proxy Product Owner</Typography>
+        <div style={{ padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
+      <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
+      <Stack ml={{ xs: 1, sm: 8 }} mr={{ xs: 8, sm: 1 }} mt={4}>
+        <h1>Expériences</h1>
+        <Divider sx={{ my: 1 }} />
+        <Tabs 
+          orientation="horizontal" 
+          value={index} 
+          onChange={(event, value) => setIndex(value as number)}
+          sx={{ justifyContent: 'center' }}
+        >
+          <TabList 
+            disableUnderline
+            sx={{
+              p: 0.5,
+              gap: 0.5,
+              borderRadius: 'xl',
+              width: 'auto',
+              bgcolor: 'background.level1',
+              [`& .${tabClasses.root}[aria-selected="true"]`]: {
+                boxShadow: 'sm',
+                bgcolor: 'background.surface',
+              },
+              justifyContent: 'center',
+            }}
+          >
+            <Tab variant={index === 0 ? 'outlined' : 'plain'} color={index === 0 ? 'primary' : 'neutral'} disableIndicator>2024</Tab>
+            <Tab variant={index === 1 ? 'outlined' : 'plain'} color={index === 1 ? 'primary' : 'neutral'} disableIndicator>2023</Tab>
+            <Tab variant={index === 2 ? 'outlined' : 'plain'} color={index === 2 ? 'primary' : 'neutral'} disableIndicator>2022</Tab>
+            <Tab variant={index === 3 ? 'outlined' : 'plain'} color={index === 3 ? 'primary' : 'neutral'} disableIndicator>2021</Tab>
+          </TabList>
+          
+          <TabPanel value={0} sx={{ p: 0 }}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
+              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Typography><b>Proxy Product Owner</b></Typography>
                 <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={170} src="public\imsa.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Recueillir les besoins clients et les traduire en fonctionnalité techniques en coordination avec l’équipe de développement (Alternance)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>1 an</Typography>
-                </Stack>
-                    </Stack>                    
+                  <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                    <Stack direction="column" spacing={1}>
+                      <Typography>Recueillir les besoins clients et les traduire en fonctionnalité techniques en coordination avec l’équipe de développement (Alternance)</Typography>
+                      <Stack direction="row" spacing={1} justifyContent="flex-start">
+                        <ClockIcon /> <Typography>1 an</Typography>
+                      </Stack>
                     </Stack>
-                </CardContent>                
-                </Card>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Product Owner - Porteur de projet</Typography>
+                  </Stack>
+                </CardContent>
+              </Card>
+              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Typography><b>Product Owner - Porteur de projet</b></Typography>
                 <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={100} src="public\ynov.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Piloter, conceptualiser et recueillir les besoins pour une application de gestion de compétences à destination de tous les organismes de formation (Projet école)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>1 an</Typography>
-                </Stack>
-                </Stack>
-                    </Stack>                    
-                </CardContent>                
-                </Card>
-                </Stack>
-                </TabPanel>
-                {/*
-                *
-                2023
-                *
-                */}
-                <TabPanel value={1}>
-                <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
-                    <Stack direction={"column"} spacing={3}>
-                    <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Proxy Product Owner</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={170} src="public\imsa.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Recueillir les besoins clients et les traduire en fonctionnalité techniques en coordination avec l’équipe de développement (Alternance)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>0 an</Typography>
-                </Stack>
-                    </Stack>                    
+                  <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <Stack direction="column" spacing={1}>
+                      <Typography>Piloter, conceptualiser et recueillir les besoins pour une application de gestion de compétences à destination de tous les organismes de formation (Projet école)</Typography>
+                      <Stack direction="row" spacing={1} justifyContent="flex-start">
+                        <ClockIcon /> <Typography>1 an</Typography>
+                      </Stack>
                     </Stack>
+                  </Stack>
                 </CardContent>                
-                </Card>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Dévellopeur Full Stack</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={170} src="public\imsa.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>2 ans</Typography>
-                </Stack>
-                    </Stack>                    
-                    </Stack>
-                </CardContent>                
-                </Card>
-                    </Stack>
-                    <Stack direction={"column"} spacing={3}>
-                    <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Product Owner - Porteur de projet</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={100} src="public\ynov.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Piloter, conceptualiser et recueillir les besoins pour une application de gestion de compétences à destination de tous les organismes de formation (Projet école)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>0 an</Typography>
-                </Stack>
-                </Stack>
-                    </Stack>                    
-                </CardContent>                
-                </Card>
-                    <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Manager de projets IT</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={100} src="public\ynov.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Accompagner les chefs de projet dans leur réalisation en leur apportant les ressources nécessaire et en résolvant les conflits internes (Projet école)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>1 an</Typography>
-                </Stack>
-                </Stack>
-                    </Stack>                    
-                </CardContent>                
-                </Card>
-                    </Stack>                
-                </Stack>
-                </TabPanel>
-                {/*
-                *
-                2022
-                *
-                */}
-                <TabPanel value={2}>
-                <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
-                    <Stack direction={"column"} spacing={3}>
-                    <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Dévellopeur Full Stack</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={170} src="public\imsa.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>1 an</Typography>
-                </Stack>
-                    </Stack>                    
-                    </Stack>
-                </CardContent>                
-                </Card>
-                    </Stack>                
-                <Stack direction={"column"} spacing={3}>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Manager de projets IT</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={100} src="public\ynov.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Accompagner les chefs de projet dans leur réalisation en leur apportant les ressources nécessaire et en résolvant les conflits internes (Projet école)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>0 an</Typography>
-                </Stack>
-                </Stack>
-                    </Stack>                    
-                </CardContent>                
-                </Card>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Développeur Full Stack</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={100} src="public\ynov.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Développer un site web pour un nouveau festival - Angular, Express js, MongoDB (Projet école)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>1 an</Typography>
-                </Stack>
-                </Stack>
-                    </Stack>                    
-                </CardContent>                
-                </Card>
-                </Stack>                
-                </Stack>                    
-                </TabPanel>
-                {/*
-                *
-                2021
-                *
-                */}
-                <TabPanel value={3}>
-                <Stack direction="row" spacing={3} justifyContent="center" mt={3}>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Dévellopeur Full Stack</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={170} src="public\imsa.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>0 an</Typography>
-                </Stack>
-                    </Stack>                    
-                    </Stack>
-                </CardContent>                
-                </Card>
-                <Card sx={{ width: 500 }} variant="outlined">
-                <Typography level="title-lg">Développeur Full Stack</Typography>
-                <CardContent>
-                    <Stack direction={"row"} spacing={1}>
-                    <img width={100} src="public\ynov.png" alt="" />
-                    <Stack direction={"column"} spacing={1}>
-                    <Typography>Développer un site web pour un nouveau festival - Angular, Express js, MongoDB (Projet école)</Typography>
-                <Stack direction="row" spacing={1} justifyContent={"start"}>
-                <ClockIcon /> <Typography>0 an</Typography>
-                </Stack>
-                </Stack>
-                    </Stack>                    
-                </CardContent>                
-                </Card>
-                </Stack>      
-                </TabPanel>
-            </Tabs>
+              </Card>
             </Stack>
-        </div>
+          </TabPanel>
+
+          <TabPanel value={1} sx={{ p: 0 }}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
+              <Stack direction="column" spacing={3}>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Proxy Product Owner</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Recueillir les besoins clients et les traduire en fonctionnalité techniques en coordination avec l’équipe de développement (Alternance)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>0 an</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Dévellopeur Full Stack</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>2 ans</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+              </Stack>
+              <Stack direction="column" spacing={3}>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Product Owner - Porteur de projet</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Piloter, conceptualiser et recueillir les besoins pour une application de gestion de compétences à destination de tous les organismes de formation (Projet école)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>0 an</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Manager de projets IT</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Accompagner les chefs de projet dans leur réalisation en leur apportant les ressources nécessaire et en résolvant les conflits internes (Projet école)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>1 an</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+              </Stack>                
+            </Stack>
+          </TabPanel>
+
+          <TabPanel value={2} sx={{ p: 0 }}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
+              <Stack direction="column" spacing={3}>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Dévellopeur Full Stack</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>1 an</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+              </Stack>                
+              <Stack direction="column" spacing={3}>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Manager de projets IT</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Accompagner les chefs de projet dans leur réalisation en leur apportant les ressources nécessaire et en résolvant les conflits internes (Projet école)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>0 an</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+                <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                  <Typography><b>Développeur Full Stack</b></Typography>
+                  <CardContent>
+                    <Stack direction="row" spacing={1} alignItems={"center"}>
+                    <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                      <Stack direction="column" spacing={1}>
+                        <Typography>Développer un site web pour un nouveau festival - Angular, Express js, MongoDB (Projet école)</Typography>
+                        <Stack direction="row" spacing={1} justifyContent="flex-start">
+                          <ClockIcon /> <Typography>1 an</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </CardContent>                
+                </Card>
+              </Stack>                
+            </Stack>                    
+          </TabPanel>
+
+          <TabPanel value={3} sx={{ p: 0 }}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
+              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Typography><b>Dévellopeur Full Stack</b></Typography>
+                <CardContent>
+                  <Stack direction="row" spacing={1} alignItems={"center"}>
+                  <img width={100} height={100} src="public/imsa.png" alt="IMSA logo" />
+                    <Stack direction="column" spacing={1}>
+                      <Typography>Développer une application de gestion éditiques - Angular, Java J2E, PhpPgAdmin (Alternance)</Typography>
+                      <Stack direction="row" spacing={1} justifyContent="flex-start">
+                        <ClockIcon /> <Typography>0 an</Typography>
+                      </Stack>
+                    </Stack>
+                  </Stack>
+                </CardContent>                
+              </Card>
+              <Card sx={{ width: { xs: '100%', sm: 500 }, mx: 'auto' }} variant="outlined">
+                <Typography><b>Développeur Full Stack</b></Typography>
+                <CardContent>
+                  <Stack direction="row" spacing={1} alignItems={"center"}>
+                  <img width={100} height={100} src="public/ynov.png" alt="Ynov logo" />
+                    <Stack direction="column" spacing={1}>
+                      <Typography>Développer un site web pour un nouveau festival - Angular, Express js, MongoDB (Projet école)</Typography>
+                      <Stack direction="row" spacing={1} justifyContent="flex-start">
+                        <ClockIcon /> <Typography>0 an</Typography>
+                      </Stack>
+                    </Stack>
+                  </Stack>
+                </CardContent>                
+              </Card>
+            </Stack>      
+          </TabPanel>
+        </Tabs>
+      </Stack>
+      <Stack alignItems={"flex-end"} direction={"column"} mt={10}>
+        <Typography fontSize={12}>Mentions légales</Typography>
+        <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
+      </Stack>
+    </div>
     )
 }
