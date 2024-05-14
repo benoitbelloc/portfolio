@@ -9,5 +9,8 @@ export default defineConfig({
   },
   server: {
     strictPort: true,
+    headers: {
+      'Content-Type': 'text/javascript'
+    }
   }
 })
