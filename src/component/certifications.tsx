@@ -14,7 +14,7 @@ export default function Certifications() {
       <Stack spacing={3} mx={{ xs: 1, md: 7 }} my={4}>
         <h1>Certifications en cours</h1>
         <Divider />
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" mt={3}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} alignItems="center" mt={3}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Mastère à Toulouse Ynov Campus</b></Typography>
             <CardContent>
@@ -42,7 +42,7 @@ export default function Certifications() {
       <Stack spacing={3} mx={{ xs: 1, md: 8 }} my={4}>
         <h1>Certifications obtenues</h1>
         <Divider />
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" mt={1}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} alignItems="center" mt={1}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Bachelor à Toulouse Ynov Campus</b></Typography>
             <CardContent>

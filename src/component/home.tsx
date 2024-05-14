@@ -11,7 +11,7 @@ export default function Home() {
       <Stack spacing={3} mx={{ xs: 2, md: 7 }} my={4}>
         <h1>Dashboard</h1>
         <Divider />
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={1}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center" mt={1}>
           <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography><b>Expériences</b></Typography>
             <CardContent>
