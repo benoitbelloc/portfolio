@@ -17,7 +17,7 @@ export default function Experiences() {
         <Tabs 
           orientation="horizontal" 
           value={index} 
-          onChange={(event, value) => setIndex(value as number)}
+          onChange={(_event, value) => setIndex(value as number)}
           sx={{ justifyContent: 'center' }}
         >
           <TabList 
