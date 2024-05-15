@@ -18,13 +18,14 @@ export default function Presentation() {
     }
 
     return (
-        <div style={{ padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
       <Stack
         direction={{ xs: 'column', md: 'row' }}
         spacing={3}
         justifyContent="center"
         alignItems="center"
         mt={5}
+        flexGrow={1}
       >
         <Card variant="outlined" sx={{ width: { xs: '100%', md: 500 }, maxWidth: '100%' }}>
           <Stack
@@ -37,7 +38,7 @@ export default function Presentation() {
             <img width={150} src="avatar.png" alt="avatar" />
             <Stack justifyContent="center" alignItems={{ xs: 'center', md: 'flex-start' }}>
               <Typography fontSize={40} component="div">Benoît Belloc</Typography>
-              <Typography fontSize={20} component="div"> Product Owner</Typography>
+              <Typography fontSize={20} component="div">Product Owner</Typography>
             </Stack>
           </Stack>
           <Typography mt={2}><b>Qui suis-je ?</b></Typography>
@@ -74,27 +75,35 @@ export default function Presentation() {
           </Card>
           <Stack direction="row" spacing={1} justifyContent="center">
             <Button variant="outlined" onClick={handleLinkedin}>
-              <Stack direction="row" spacing={1} alignItems={"center"}>
+              <Stack direction="row" spacing={1} alignItems="center">
                 <LinkedinIcon />
                 <Typography>Ma page LinkedIn</Typography>
               </Stack>
             </Button>
             <Button variant="outlined" onClick={handleCV}>
-              <Stack direction="row" spacing={1} alignItems={"center"}>
+              <Stack direction="row" spacing={1} alignItems="center">
                 <FileIcon />
                 <Typography>Mon CV</Typography>
               </Stack>
             </Button>
           </Stack>
           <Button onClick={() => navigate('/home')}>
-            <Stack direction={"row"} spacing={1} alignItems={"center"}>
-            <Typography textColor={"white"}>Pour plus de détails... C'est par ici !</Typography>
-            <CircleArrowRightIcon />
+            <Stack direction="row" spacing={1} alignItems="center">
+              <Typography textColor="white">Pour plus de détails... C'est par ici !</Typography>
+              <CircleArrowRightIcon />
             </Stack>
           </Button>
         </Stack>
       </Stack>
-      <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+      <Stack
+        sx={{
+          marginTop: 'auto',
+          alignItems: 'flex-end',
+          direction: 'column',
+          mt: 3
+        }}
+        alignItems="flex-end" direction="column" mt={3}
+      >
         <Typography fontSize={12}>Mentions légales</Typography>
         <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
       </Stack>

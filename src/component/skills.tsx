@@ -7,8 +7,9 @@ export default function Skills() {
     const navigate = useNavigate();
 
     return (
-        <div style={{ padding: "0 16px", maxWidth: "100%", boxSizing: 'border-box' }}>
+        <div>
             <Button onClick={() => navigate('/home')} variant="outlined">Retour</Button>
+            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
             <Stack mx={{ xs: 0, md: 7 }} my={4}>
                 <h1>Hard Skills</h1>
                 <Divider inset="none" />
@@ -310,10 +311,19 @@ export default function Skills() {
                 </Stack>
                 </Stack>                
             </Stack>
-            <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+            <Stack
+        sx={{
+          marginTop: 'auto',
+          alignItems: 'flex-end',
+          direction: 'column',
+          mt: 3
+        }}
+        alignItems="flex-end" direction="column" mt={3}
+      >
         <Typography fontSize={12}>Mentions légales</Typography>
         <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
       </Stack>
+      </div>
         </div>
     )
 }

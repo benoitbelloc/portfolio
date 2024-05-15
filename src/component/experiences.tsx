@@ -9,8 +9,9 @@ export default function Experiences() {
     const [index, setIndex] = React.useState(0);
 
     return (
-        <div style={{ padding: '0 0px', maxWidth: '100%', boxSizing: 'border-box' }}>
+        <div>
       <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
       <Stack ml={{ xs: 0, sm: 7 }} mr={{ xs: 0, sm: 7 }} mt={4}>
         <h1>Expériences</h1>
         <Divider sx={{ my: 1 }} />
@@ -224,10 +225,19 @@ export default function Experiences() {
           </TabPanel>
         </Tabs>
       </Stack>
-      <Stack alignItems={"flex-end"} direction={"column"} mt={10}>
+      <Stack
+        sx={{
+          marginTop: 'auto',
+          alignItems: 'flex-end',
+          direction: 'column',
+          mt: 3
+        }}
+        alignItems="flex-end" direction="column" mt={3}
+      >
         <Typography fontSize={12}>Mentions légales</Typography>
         <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
       </Stack>
+      </div>
     </div>
     )
 }

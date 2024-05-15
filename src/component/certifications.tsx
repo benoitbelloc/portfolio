@@ -9,8 +9,9 @@ export default function Certifications() {
     }
 
     return (
-        <div style={{ padding: '3px 3px', maxWidth: '100%', boxSizing: 'border-box' }}>
+        <div>
       <Button onClick={() => navigate('/home')} variant="outlined" sx={{ mt: 2 }}>Retour</Button>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', padding: '0 16px', maxWidth: '100%', boxSizing: 'border-box' }}>
       <Stack spacing={3} mx={{ xs: 0, md: 7 }} my={4}>
         <h1>Certifications en cours</h1>
         <Divider />
@@ -63,10 +64,19 @@ export default function Certifications() {
           </Card>
         </Stack>
       </Stack>
-      <Stack alignItems={"flex-end"} direction={"column"} mt={3}>
+      <Stack
+        sx={{
+          marginTop: 'auto',
+          alignItems: 'flex-end',
+          direction: 'column',
+          mt: 3
+        }}
+        alignItems="flex-end" direction="column" mt={3}
+      >
         <Typography fontSize={12}>Mentions légales</Typography>
         <Typography fontSize={12}>© Benoît Belloc - 2024 - Tous droits réservés</Typography>
       </Stack>
+      </div>
     </div>
     )
 }
