@@ -40,12 +40,12 @@ export default function Contact() {
           <form ref={form} onSubmit={sendEmail} style={{ width: '100%', maxWidth: 600 }}>
             <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
               <FormControl sx={{ width: "100%" }}>
-                <FormLabel>Nom</FormLabel>
-                <Input type="text" name="user_lastName" />
+                <FormLabel>Nom*</FormLabel>
+                <Input required type="text" name="user_lastName" />
               </FormControl>
               <FormControl sx={{ width: "100%" }}>
-                <FormLabel>Prénom</FormLabel>
-                <Input type="text" name="user_firstName" />
+                <FormLabel>Prénom*</FormLabel>
+                <Input required type="text" name="user_firstName" />
               </FormControl>
             </Stack>
             <FormControl sx={{ mt: 1, width: "100%" }}>
