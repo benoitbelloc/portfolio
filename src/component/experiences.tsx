@@ -3,6 +3,7 @@ import { ClockIcon } from "lucide-react";
 import { tabClasses } from '@mui/joy/Tab';
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Experiences() {
     const navigate = useNavigate();
@@ -44,6 +45,15 @@ export default function Experiences() {
           
           <TabPanel value={0} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center" justifyContent="center" mt={3}>
+            <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
               <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Proxy Product Owner</b></Typography>
                 <CardContent>
@@ -58,6 +68,16 @@ export default function Experiences() {
                   </Stack>
                 </CardContent>
               </Card>
+              </motion.div>
+              <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
               <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Product Owner - Porteur de projet</b></Typography>
                 <CardContent>
@@ -72,12 +92,22 @@ export default function Experiences() {
                   </Stack>
                 </CardContent>                
               </Card>
+              </motion.div>
             </Stack>
           </TabPanel>
 
           <TabPanel value={1} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
               <Stack direction="column" spacing={3}>
+              <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Proxy Product Owner</b></Typography>
                   <CardContent>
@@ -92,6 +122,16 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Dévellopeur Full Stack</b></Typography>
                   <CardContent>
@@ -106,8 +146,18 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
               </Stack>
               <Stack direction="column" spacing={3}>
+              <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Product Owner - Porteur de projet</b></Typography>
                   <CardContent>
@@ -122,6 +172,16 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Manager de projets IT</b></Typography>
                   <CardContent>
@@ -136,6 +196,7 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
               </Stack>                
             </Stack>
           </TabPanel>
@@ -143,6 +204,15 @@ export default function Experiences() {
           <TabPanel value={2} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
               <Stack direction="column" spacing={3}>
+              <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Dévellopeur Full Stack</b></Typography>
                   <CardContent>
@@ -157,8 +227,18 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
               </Stack>                
               <Stack direction="column" spacing={3}>
+              <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Manager de projets IT</b></Typography>
                   <CardContent>
@@ -173,6 +253,16 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                   <Typography><b>Développeur Full Stack</b></Typography>
                   <CardContent>
@@ -187,12 +277,22 @@ export default function Experiences() {
                     </Stack>
                   </CardContent>                
                 </Card>
+                </motion.div>
               </Stack>                
             </Stack>                    
           </TabPanel>
 
           <TabPanel value={3} sx={{ p: 0 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" mt={3}>
+            <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
               <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Dévellopeur Full Stack</b></Typography>
                 <CardContent>
@@ -207,6 +307,16 @@ export default function Experiences() {
                   </Stack>
                 </CardContent>                
               </Card>
+              </motion.div>
+              <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
               <Card sx={{ width: { xs: 'auto', sm: 500 }, mx: 'auto' }} variant="outlined">
                 <Typography><b>Développeur Full Stack</b></Typography>
                 <CardContent>
@@ -221,6 +331,7 @@ export default function Experiences() {
                   </Stack>
                 </CardContent>                
               </Card>
+              </motion.div>
             </Stack>      
           </TabPanel>
         </Tabs>

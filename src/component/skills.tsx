@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, CardOverflow, Chip, Divider, Stack, Tooltip, Typography } from "@mui/joy";
 import { CheckIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 export default function Skills() {
@@ -13,8 +14,17 @@ export default function Skills() {
             <Stack mx={{ xs: 0, md: 7 }} my={4}>
                 <h1>Hard Skills</h1>
                 <Divider inset="none" />
+                
                 <Stack direction={{ xs: 'column', md: 'row' }} spacing={5} alignItems="center" justifyContent={"center"} mt={3}>
                 <Stack direction="column" spacing={3} justifyContent="center">
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20
+  }}>
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                         <CardContent>
                             <Stack direction="row" spacing={1}>
@@ -44,6 +54,16 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Outils</CardOverflow>
                     </Card>
+                    </motion.div>
+                    <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.1
+  }}>
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
@@ -73,8 +93,18 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Méthodes</CardOverflow>
                     </Card>
+                    </motion.div>
                     </Stack>
                     <Stack direction="column" spacing={3} justifyContent="center">
+                    <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.2
+  }}>
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                         <CardContent>
                             <Stack direction="row" spacing={1}>
@@ -104,6 +134,16 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Frontend</CardOverflow>
                     </Card>
+                    </motion.div>
+                    <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.3
+  }}>
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
@@ -133,8 +173,18 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>BDD et ORM</CardOverflow>
                     </Card>
+                    </motion.div>
                     </Stack>
                     <Stack direction="column" spacing={3} justifyContent="center">
+                    <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.4
+  }}>
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
@@ -164,6 +214,16 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>Backend</CardOverflow>
                     </Card>
+                    </motion.div>
+                    <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.5
+  }}>
                     <Card orientation="horizontal" variant="outlined" sx={{ width: "280px" }}>
                     <CardContent>
                     <Stack direction="row" spacing={1}>
@@ -193,14 +253,25 @@ export default function Skills() {
                           borderColor: 'divider',
                         }}>DevOps</CardOverflow>
                     </Card>
+                    </motion.div>
                     </Stack>
                 </Stack>
+                
             </Stack>
             <Stack mx={{ xs: 2, md: 7 }} my={4}>
                 <h1>Soft Skills</h1>
                 <Divider inset="none" />
                 <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" mt={3}>
                 <Stack direction="column" spacing={3} justifyContent="center" mt={1}>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -209,6 +280,16 @@ export default function Skills() {
                 >
                     <Typography>Esprit d'équipe</Typography>
                 </Chip>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.05
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -217,8 +298,18 @@ export default function Skills() {
                 >
                     <Typography>Ecoute</Typography>
                 </Chip>
+                </motion.div>
                 </Stack>
                 <Stack direction="column" spacing={3} justifyContent="center" mt={1}>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.1
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -227,7 +318,16 @@ export default function Skills() {
                 >
                     <Typography>Bienveillant</Typography>
                 </Chip>
-                
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.15
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -236,8 +336,18 @@ export default function Skills() {
                 >
                     <Typography>Respect</Typography>
                 </Chip>
+                </motion.div>
                 </Stack>     
                 <Stack direction="column" spacing={3} justifyContent="center" mt={1}>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.2
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -246,6 +356,16 @@ export default function Skills() {
                 >
                     <Typography>Ponctuel</Typography>
                 </Chip>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.25
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -254,8 +374,18 @@ export default function Skills() {
                 >
                     <Typography>Curieux</Typography>
                 </Chip>
+                </motion.div>
                 </Stack>           
-                <Stack direction="column" spacing={3} justifyContent="center" mt={1}>                    
+                <Stack direction="column" spacing={3} justifyContent="center" mt={1}>  
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.3
+  }}>             
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -264,6 +394,16 @@ export default function Skills() {
                 >
                     <Typography>Autonome</Typography>
                 </Chip>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.35
+  }}>  
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -272,8 +412,18 @@ export default function Skills() {
                 >
                     <Typography>Flexible</Typography>
                 </Chip>
+                </motion.div> 
                 </Stack>
                 <Stack direction="column" spacing={3} justifyContent="center" mt={1}>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.4
+  }}>  
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -282,6 +432,16 @@ export default function Skills() {
                 >
                     <Typography>Organisé</Typography>
                 </Chip>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.45
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -290,8 +450,18 @@ export default function Skills() {
                 >
                     <Typography>Créatif</Typography>
                 </Chip>
+                </motion.div>
                 </Stack>           
                 <Stack direction="column" spacing={3} justifyContent="center" mt={1}>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.5
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -300,6 +470,16 @@ export default function Skills() {
                 >
                     <Typography>Ouvert</Typography>
                 </Chip>
+                </motion.div>
+                <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.55
+  }}>
                 <Chip
                 variant="outlined"
                 color="primary"
@@ -308,6 +488,7 @@ export default function Skills() {
                 >
                     <Typography>Rigoureux</Typography>
                 </Chip>
+                </motion.div>
                 </Stack>
                 </Stack>                
             </Stack>
