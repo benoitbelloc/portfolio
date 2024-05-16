@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
 import { MailIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 
 export default function Contact() {
@@ -36,6 +37,15 @@ export default function Contact() {
       <Stack spacing={3} mx={{ xs: 2, md: 7 }} my={4}>
         <h1>Contact</h1>
         <Divider />
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
         <Stack direction="row" justifyContent="center" mt={1}>
           <form ref={form} onSubmit={sendEmail} style={{ width: '100%', maxWidth: 600 }}>
             <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
@@ -70,7 +80,8 @@ export default function Contact() {
             </Button>
           </form>
         </Stack>
-      </Stack>
+        </motion.div>
+      </Stack>      
       <Stack
         sx={{
           marginTop: 'auto',

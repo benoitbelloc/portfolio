@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, Divider, Stack, Typography } from "@mui/joy";
 import { CalendarIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Certifications() {
     const navigate = useNavigate();
@@ -15,8 +16,17 @@ export default function Certifications() {
       <Stack spacing={3} mx={{ xs: 0, md: 7 }} my={4}>
         <h1>Certifications en cours</h1>
         <Divider />
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent={"center"} alignItems="center" mt={3}>
-          <Card sx={{ width: 300 }} variant="outlined">
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent={"center"} alignItems="center" mt={3}>
+    <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
+    <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Mastère à Toulouse Ynov Campus</b></Typography>
             <CardContent>
               <Typography>Expert en développement Web et Web Mobile</Typography>
@@ -25,6 +35,16 @@ export default function Certifications() {
               <CalendarIcon /> <Typography>2022-2024</Typography>
             </Stack>
           </Card>
+          </motion.div>
+          <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.1
+  }}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Titre RNCP niveau 7 : 
               <Typography component="span" sx={{ color: "blue", cursor: "pointer" }} onClick={handleRNCP}> RNCP35078</Typography>
@@ -37,13 +57,24 @@ export default function Certifications() {
               <CalendarIcon /> <Typography>2023-2024</Typography>
             </Stack>
           </Card>
-        </Stack>
-      </Stack>
+          </motion.div>
+          </Stack>
+  </Stack>
+
 
       <Stack spacing={3} mx={{ xs: 0, md: 8 }} my={4}>
         <h1>Certifications obtenues</h1>
         <Divider />
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} justifyContent="center" alignItems="center" mt={1}>
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.2
+  }}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>Bachelor à Toulouse Ynov Campus</b></Typography>
             <CardContent>
@@ -53,6 +84,16 @@ export default function Certifications() {
               <CalendarIcon /> <Typography>2021-2022</Typography>
             </Stack>
           </Card>
+          </motion.div>
+          <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.3
+  }}>
           <Card sx={{ width: 300 }} variant="outlined">
             <Typography><b>DEUG MIASH à l'université Toulouse Jean-Jaurès</b></Typography>
             <CardContent>
@@ -62,6 +103,7 @@ export default function Certifications() {
               <CalendarIcon /> <Typography>2019-2021</Typography>
             </Stack>
           </Card>
+          </motion.div>
         </Stack>
       </Stack>
       <Stack

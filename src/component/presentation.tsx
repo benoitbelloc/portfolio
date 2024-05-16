@@ -1,6 +1,7 @@
 import { Button, Card, Stack, Typography } from "@mui/joy";
 import { CalendarIcon, CarIcon, CircleArrowRightIcon, FileIcon, LinkedinIcon, MailIcon, MapIcon, PhoneCallIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Presentation() {
     const navigate = useNavigate();
@@ -27,6 +28,15 @@ export default function Presentation() {
         mt={5}
         flexGrow={1}
       >
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0
+  }}>
         <Card variant="outlined" sx={{ width: { xs: '100%', md: 500 }, maxWidth: '100%' }}>
           <Stack
             direction={{ xs: 'column', md: 'row' }}
@@ -49,7 +59,17 @@ export default function Presentation() {
             Je suis à la recherche d'opportunités professionnelles innovantes et enrichissantes.
           </Typography>
         </Card>
+        </motion.div>
         <Stack direction="column" spacing={6} alignItems="center">
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.1
+  }}>
           <Card variant="outlined" sx={{ width: { xs: '100%', md: 500 }, maxWidth: '100%', height: 220 }}>
             <Typography><b>A propos de moi...</b></Typography>
             <Stack direction="row" spacing={1} alignItems="center" mt={1}>
@@ -73,6 +93,16 @@ export default function Presentation() {
               <Typography>Disponible à partir du 30 septembre 2024</Typography>
             </Stack>
           </Card>
+          </motion.div>
+          <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.2
+  }}>
           <Stack direction="row" spacing={1} justifyContent="center">
             <Button variant="outlined" onClick={handleLinkedin}>
               <Stack direction="row" spacing={1} alignItems="center">
@@ -85,14 +115,25 @@ export default function Presentation() {
                 <FileIcon />
                 <Typography>Mon CV</Typography>
               </Stack>
-            </Button>
+            </Button>            
           </Stack>
+          </motion.div>
+          <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+    delay: 0.3
+  }}>
           <Button onClick={() => navigate('/home')}>
             <Stack direction="row" spacing={1} alignItems="center">
               <Typography textColor="white">Pour plus de détails... C'est par ici !</Typography>
               <CircleArrowRightIcon />
             </Stack>
           </Button>
+          </motion.div>
         </Stack>
       </Stack>
       <Stack

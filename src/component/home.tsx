@@ -1,5 +1,6 @@
 import { Button, Card, CardContent, Divider, Stack, Typography } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -12,7 +13,15 @@ export default function Home() {
         <h1 style={{ textAlign: 'center' }}>Dashboard</h1>
         <Divider />
         <Stack spacing={3} justifyContent="center" alignItems="center" mt={1}>
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" alignItems="center" flexWrap="wrap">
+        <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20
+  }}>
+    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" alignItems="center" flexWrap="wrap">
             <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
               <Typography><b>Expériences</b></Typography>
               <CardContent>
@@ -53,7 +62,16 @@ export default function Home() {
               </CardContent>
             </Card>
           </Stack>
-          <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, mt: 4, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
+  </motion.div>
+  <motion.div
+  initial={{ scale: 0 }}
+  animate={{ rotate: 0, scale: 1 }}
+  transition={{
+    type: "spring",
+    stiffness: 260,
+    damping: 20
+  }}>
+    <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, mt: 4, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography><b>Contact</b></Typography>
             <CardContent>
               <img src="contact.png" alt="" style={{ width: '100%', height: 'auto' }} />
@@ -66,6 +84,7 @@ export default function Home() {
               </Button>
             </CardContent>
           </Card>
+  </motion.div>
         </Stack>
       </Stack>
       <Stack 
