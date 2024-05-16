@@ -1,7 +1,6 @@
 import { Button, Card, Stack, Typography } from "@mui/joy";
 import { CalendarIcon, CarIcon, CircleArrowRightIcon, FileIcon, LinkedinIcon, MailIcon, MapIcon, PhoneCallIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 
 export default function Presentation() {
     const navigate = useNavigate();
