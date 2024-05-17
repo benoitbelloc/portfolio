@@ -25,7 +25,7 @@ export default function Home() {
             <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
               <Typography><b>Expériences</b></Typography>
               <CardContent>
-                <img src="experiences.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                <img src="experiences.gif" alt="" style={{ width: '100%', height: 'auto' }} />
                 <Button
                   color="primary"
                   sx={{ mt: 2, fontWeight: 600 }}
@@ -38,7 +38,7 @@ export default function Home() {
             <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
               <Typography><b>Compétences</b></Typography>
               <CardContent>
-                <img src="skills.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                <img src="skills.gif" alt="" style={{ width: '100%', height: 'auto' }} />
                 <Button
                   color="primary"
                   sx={{ mt: 2, fontWeight: 600 }}
@@ -51,7 +51,7 @@ export default function Home() {
             <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
               <Typography><b>Certifications</b></Typography>
               <CardContent>
-                <img src="certifications.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                <img src="graduations.gif" alt="" style={{ width: '100%', height: 'auto' }} />
                 <Button
                   color="primary"
                   sx={{ mt: 2, fontWeight: 600 }}
@@ -74,7 +74,7 @@ export default function Home() {
     <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, mt: 4, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography><b>Contact</b></Typography>
             <CardContent>
-              <img src="contact.png" alt="" style={{ width: '100%', height: 'auto' }} />
+              <img src="mailing.gif" alt="" style={{ width: '100%', height: 'auto' }} />
               <Button
                 color="primary"
                 sx={{ mt: 2, fontWeight: 600 }}
