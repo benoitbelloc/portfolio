@@ -71,7 +71,7 @@ export default function Home() {
     stiffness: 260,
     damping: 20
   }}>
-    <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, mt: 4, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
+    <Card variant="outlined" sx={{ width: 250, backgroundColor: cardColor, mt: 0, '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' } }}>
             <Typography><b>Contact</b></Typography>
             <CardContent>
               <img src="mailing.gif" alt="" style={{ width: '100%', height: 'auto' }} />
